@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://adxu9v.github.io/ReactWeatherApp/",
+  "homepage": ".",
   "eslintConfig": {
     "extends": [
       "react-app",
