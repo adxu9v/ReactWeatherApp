@@ -3,6 +3,23 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+.App{
+  background-size: cover;
+}
+.bg-cloud{
+  background-image: url('../public/storm.jpeg');
+}
+.bg-rain{
+  background-image: url('../public/rain.jpeg');
+}
+.bg-fog{
+  background-image: url('../public/fog.jpeg');
+}
+.bg-sunny{
+  background-image: url('../public/sunny.jpeg');
 }
 .bg-basic{
   background-color: #333;
@@ -10,35 +27,46 @@
 main{
   min-height: 100vh;
   padding: 25px;
+  padding-bottom: 100px;
+}
+.informaitonBox{
+  width: 50vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 50px 0;
+  margin: auto;
+  color: #000;
+  box-shadow: 5px 5px 10px;
 }
 .searchBox{
   width: 100%;
   margin: 0 0 75px;
+  
 }
 .searchBox .searchBar{
-  width: 100%;
+  width: 50%;
   padding: 15px;
   display: block;
   border-radius: 10px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
   transition: 0.3s;
-  outline: none;
   font-size: 20px;
+  margin: auto;
+  box-shadow: 5px 5px 10px;
 }
 .searchBar:focus{
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   
 }
 .location{
-  color: #fff;
   font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  text-shadow: 3px 3px rgba(50, 50, 50, 0.7);
 }
 .date{
   text-align: center;
-  color: #fff;
   font-size: 24px;
   font-style: italic;
 }
@@ -49,30 +77,47 @@ main{
   margin: 30px auto;
   display: inline-block;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 25px 25px;
-  color: #fff;
   font-size: 90px;
   text-align: center;
-  box-shadow: 6px 6px rgba(0, 0, 0, 0.2);
 }
 .weather, .humidity, .wind, .rain{
-  
-  color: #fff;
   font-size: 60px;
   font-weight: 700;
+  padding: 30px 0;
+}
+.weather>img{
+  width: 20%;
+}
+.weatherList{
+  width: 100%;
+  height: 30vh;
+  margin: 20px  0px 0px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.weather>img{width: 20%;}
-.weatherList{width: 100%; height: 30vh; margin: 20px  0px 0px; display: flex;}
 .weatherList > li{
-  width: 25%; height: 100%; border: 1px solid #000; border-right: none;
+  width: 25%;
+  height: 100%;
+  border: 1px solid #000;
+  border-right: none;
 }
-.weatherList > li:last-child{border-right: 1px solid #000;}
-.bg-cloud{background-image: url('../public/storm.jpeg'); background-size: cover;}
-.bg-rain{background-image: url('../public/rain.jpeg'); background-size: cover;}
-.bg-fog{background-image: url('../public/fog.jpeg'); background-size: cover;}
-.bg-sunny{background-image: url('../public/sunny.jpeg'); background-size: cover;}
+.weatherList > li:last-child{
+  border-right: 1px solid #000;
+}
+@media screen and (min-width: 1200px) {
+  *{
+    color: #000;
+    font-size: 55%;
+  }
+}
+@media screen  and (min-width: 768px) and (max-width:1200px){
+  *{
+    color: #000;
+  }
+}
+@media screen  and (max-width: 480px){
+  *{
+    color: #000;
+  }
+}
